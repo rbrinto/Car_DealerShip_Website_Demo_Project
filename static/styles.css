@@ -1,0 +1,257 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+nav a {
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+nav a.active {
+    background-color: #555;
+}
+
+nav a:hover {
+    background-color: #555;
+    text-decoration: none;
+}
+
+.centered-title {
+    text-align: center;
+    margin-top: 20px; /* Add space between header and title */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.car {
+    margin-bottom: 20px;
+}
+
+.car img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.welcome-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.subscribe-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.subscribe-section h2 {
+    margin-top: 40px;
+}
+
+.subscribe-section p {
+    margin-bottom: 20px;
+}
+
+.registration-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.registration-section h2 {
+    margin-top: 50px;
+}
+
+.registration-section form {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Center the input text boxes horizontally */
+}
+
+/* Add this CSS to limit the maximum width of the input text boxes */
+.registration-section input[type="text"],
+.registration-section input[type="email"],
+.registration-section input[type="password"] {
+    width: calc(100% - 20px); /* Adjust the maximum width as needed */
+    max-width: 400px; /* Set a maximum width for the input text boxes */
+    padding: 10px;
+    margin: 0 auto 10px; /* Center the input text boxes vertically and add margin at the bottom */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left; /* Align text inside input boxes to the left */
+}
+
+.registration-section button {
+    width: calc(100% - 20px); /* Adjust the width of the button */
+    max-width: 400px; /* Set a maximum width for the button */
+    padding: 10px 20px;
+    margin: 0 auto 10px; /* Center the button horizontally and add margin at the bottom */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-section button:hover {
+    background-color: #555;
+}
+
+.subscribe-section input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.subscribe-section button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subscribe-section button:hover {
+    background-color: #555;
+}
+
+.car-listings {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-card {
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth effect */
+}
+
+.car-card:hover {
+    transform: translateY(-5px); /* Move the card up slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+.car-preview {
+    height: 150px;
+    background-size: cover; /* Resize the background image to contain the entire image within the area */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
+}
+
+.car-details {
+    padding: 20px;
+}
+
+.car-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.car-details p {
+    margin: 5px 0;
+}
+
+.content {
+    text-align: center; /* Center align all content */
+}
+
+.content h2 {
+    margin-top: 20px; /* Add margin to headings for spacing */
+}
+
+.content p {
+    margin-bottom: 10px;
+    margin-left: 400px;
+    margin-right: 400px; /* Add margin to paragraphs for spacing */
+}
+
+.login-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-section h2 {
+    margin-top: 50px;
+}
+
+.login-section form {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Center the input text boxes horizontally */
+}
+
+/* Add this CSS to limit the maximum width of the input text boxes */
+.login-section input[type="text"],
+.login-section input[type="password"] {
+    width: calc(100% - 20px); /* Adjust the maximum width as needed */
+    max-width: 400px; /* Set a maximum width for the input text boxes */
+    padding: 10px;
+    margin: 0 auto 10px; /* Center the input text boxes vertically and add margin at the bottom */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left; /* Align text inside input boxes to the left */
+}
+
+.login-section button {
+    width: calc(100% - 20px); /* Adjust the width of the button */
+    max-width: 400px; /* Set a maximum width for the button */
+    padding: 10px 20px;
+    margin: 0 auto 10px; /* Center the button horizontally and add margin at the bottom */
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-section button:hover {
+    background-color: #555;
+}

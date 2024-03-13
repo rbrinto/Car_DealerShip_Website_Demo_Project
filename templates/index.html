@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealership</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Car Dealership</a></h1>
+        <nav>
+            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Inventory</a>
+            <a class="{% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
+            {% if session.get('user_id') %}
+            <a href="{{ url_for('logout') }}">Logout</a>
+            <a href="{{ url_for('mybookings') }}">My Bookings</a>
+            {% endif %}
+        </nav>
+    </header>
+    <div class="welcome-section">
+        <h2>Welcome to Our Car Dealership!</h2>
+        <p>At Car Dealership, we're passionate about providing you with the best selection of quality cars at competitive prices. With years of experience in the automotive industry, we strive to exceed your expectations every step of the way.</p>
+        <p>Whether you're in the market for a new vehicle or looking to trade in your current car, our team of experts is here to assist you. Browse our inventory online or visit our showroom to explore our wide range of vehicles.</p>
+        <p>We look forward to serving you and helping you find the perfect car that suits your needs and budget.</p>
+    </div>
+    <div class="subscribe-section">
+        <h2>Subscribe for Exclusive Deals</h2>
+        <p>Join our mailing list to receive updates on new arrivals, special promotions, and exclusive deals!</p>
+        <form>
+            <input type="email" name="email" placeholder="Enter your email address" required>
+            <button type="submit">Join</button>
+        </form>
+        
+    </div>
+    <div class="registration-section">
+        <h2>Create an Account</h2>
+        <form action="/register" method="POST" onsubmit="return validateRegistrationForm()">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+        {% if not session.get('user_id') %}
+        <p>Already have an account? <a href="{{ url_for('sign_in') }}">Sign in here</a>.</p>
+        {% endif %}
+    </div>
+    <script>
+    
+        function validateRegistrationForm() {
+            var username = document.getElementsByName("username")[0].value;
+            var email = document.getElementsByName("email")[0].value;
+            var password = document.getElementsByName("password")[0].value;
+            var confirm_password = document.getElementsByName("confirm_password")[0].value;
+    
+            if (password !== confirm_password) {
+                alert("Password and confirm password do not match.");
+                return false;
+            }
+            alert("Registration was successful!");
+            return true;
+        }
+    </script>
+    
+</body>
+</html>
+

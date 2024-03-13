@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealership - Inventory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Car Dealership</a></h1>
+        <nav>
+            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Inventory</a>
+            <a class="{% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
+            {% if session.get('user_id') %}
+            <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+        </nav>
+    </header>
+    <div class="centered-title">
+        <h2>Available Inventory</h2>
+    </div>
+    <div class="car-listings">
+        <a href="{{ url_for('book_car', car_name='Car Model 1') }}" class="car-card">
+            <div class="car-preview" style="background-image: url('/static/car1.jpg');"></div>
+            <div class="car-details">
+                <h3>Car Name</h3>
+                <p>Price: $XX,XXX</p>
+                <p>Mileage: XX,XXX miles</p>
+                <p>Year: XXXX</p>
+            </div>
+        </a>
+        <a href="{{ url_for('book_car', car_name='Car Model 2') }}" class="car-card">
+            <div class="car-preview" style="background-image: url('/static/car2.jpg');"></div>
+            <div class="car-details">
+                <h3>Car Name</h3>
+                <p>Price: $XX,XXX</p>
+                <p>Mileage: XX,XXX miles</p>
+                <p>Year: XXXX</p>
+            </div>
+        </a>
+        <a href="{{ url_for('book_car', car_name='Car Model 3') }}" class="car-card">
+            <div class="car-preview" style="background-image: url('/static/car3.jpg');"></div>
+            <div class="car-details">
+                <h3>Car Name</h3>
+                <p>Price: $XX,XXX</p>
+                <p>Mileage: XX,XXX miles</p>
+                <p>Year: XXXX</p>
+            </div>
+        </a>
+        <a href="{{ url_for('book_car', car_name='Car Model 4') }}" class="car-card">
+            <div class="car-preview" style="background-image: url('/static/car4.jpg');"></div>
+            <div class="car-details">
+                <h3>Car Name</h3>
+                <p>Price: $XX,XXX</p>
+                <p>Mileage: XX,XXX miles</p>
+                <p>Year: XXXX</p>
+            </div>
+        </a>
+        <a href="{{ url_for('book_car', car_name='Car Model 5') }}" class="car-card">
+            <div class="car-preview" style="background-image: url('/static/car5.jpg');"></div>
+            <div class="car-details">
+                <h3>Car Name</h3>
+                <p>Price: $XX,XXX</p>
+                <p>Mileage: XX,XXX miles</p>
+                <p>Year: XXXX</p>
+            </div>
+        </a>
+        <a href="{{ url_for('book_car', car_name='Car Model 6') }}" class="car-card">
+            <div class="car-preview" style="background-image: url('/static/car6.jpg');"></div>
+            <div class="car-details">
+                <h3>Car Name</h3>
+                <p>Price: $XX,XXX</p>
+                <p>Mileage: XX,XXX miles</p>
+                <p>Year: XXXX</p>
+            </div>
+        </a>
+        <a href="{{ url_for('book_car', car_name='Car Model 7') }}" class="car-card">
+            <div class="car-preview" style="background-image: url('/static/car7.jpg');"></div>
+            <div class="car-details">
+                <h3>Car Name</h3>
+                <p>Price: $XX,XXX</p>
+                <p>Mileage: XX,XXX miles</p>
+                <p>Year: XXXX</p>
+            </div>
+        </a>
+        <a href="{{ url_for('book_car', car_name='Car Model 8') }}" class="car-card">
+            <div class="car-preview" style="background-image: url('/static/car8.jpg');"></div>
+            <div class="car-details">
+                <h3>Car Name</h3>
+                <p>Price: $XX,XXX</p>
+                <p>Mileage: XX,XXX miles</p>
+                <p>Year: XXXX</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Dealership - About Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Car Dealership</a></h1>
+        <nav>
+            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Inventory</a>
+            <a class="{% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
+            {% if session.get('user_id') %}
+            <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+        </nav>
+    </header>
+    <div class="content">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies purus a mauris tempus, euismod vehicula magna ultricies. Nam feugiat, ipsum eu fringilla accumsan, tortor ligula varius lorem, nec bibendum lorem purus a eros. Nam ac dapibus odio. Suspendisse non massa in magna molestie vulputate. Donec pharetra libero ac tortor luctus bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus tristique urna quis metus ullamcorper, nec malesuada purus molestie. Nullam in odio nec mauris dapibus congue.</p>
+        <p>Suspendisse at purus non eros euismod ullamcorper. Sed ac aliquet leo. Cras fringilla purus tincidunt ornare tristique. Donec in varius risus, nec tincidunt ante. Morbi eu viverra massa, sed sagittis urna. Vestibulum sit amet lorem placerat, placerat dui ac, eleifend magna. Sed fringilla nibh non leo hendrerit gravida. Fusce egestas sollicitudin leo sed vestibulum. Mauris nisl tellus, hendrerit vel ex gravida, vulputate commodo nunc. Ut bibendum tincidunt ligula, eget congue elit consequat sed. Quisque at erat urna. Praesent pharetra vehicula sapien ac ultricies. Vivamus auctor neque vel felis efficitur, at sagittis risus lacinia. Quisque fermentum purus sit amet arcu molestie luctus. Maecenas quis tincidunt turpis. </p>
+        <h2>Contacts</h2>
+        <p>Email: example@example.com</p>
+        <p>Phone: +1234567890</p>
+    </div>
+    <!-- Add your about content here -->
+</body>
+</html>
+
