@@ -1,8 +1,11 @@
 # SRT211NIA Project
 
 Organization: Seneca College / Seneca Polytechnic
+
 Course: SRT211
+
 Term: Winter, 2024
+
 Authors: bvummadi, rhina, rbrinto
 
 # Project Discription
