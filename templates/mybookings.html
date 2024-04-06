@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Phynix Auto Group</a></h1>
+        <nav>
+            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Available Cars</a>
+            <a class="{% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
+            {% if session.get('user_id') %}
+            <a href="{{ url_for('logout') }}">Logout</a>
+            {% endif %}
+        </nav>
+    </header>
+        <h1>My Bookings</h1>
+        {% if car_names %}
+        <ul>
+            {% for car_name in car_names %}
+                <li>{{ car_name }}
+                    <form action="{{ url_for('remove_booking') }}" method="post" style="display: inline;">
+                        <input type="hidden" name="car_name" value="{{ car_name }}">
+                        <input type="hidden" name="user_id" value="{{ user_id }}">
+                        <button type="submit">Remove</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p>No bookings found.</p>
+        {% endif %}
+</body>

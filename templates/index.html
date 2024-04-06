@@ -18,6 +18,11 @@
             {% endif %}
         </nav>
     </header>
+    {% if message %}
+    <script type="text/javascript">
+        alert("{{ message }}");
+    </script>
+    {% endif %}
     <div class="welcome-section">
         <h2>Welcome to Phynix Auto Group</h2>
         <p>At Phynix Auto Group, we're passionate about providing you with the best selection of quality cars at competitive prices. With years of experience in the automotive industry, we strive to exceed your expectations every step of the way.</p>
