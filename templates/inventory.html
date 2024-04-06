@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Dealership - Inventory</title>
+    <title>Phynix Auto Group - Available Stock</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
-        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Car Dealership</a></h1>
+        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Phynix Auto Group</a></h1>
         <nav>
-            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Inventory</a>
+            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Cars In-Stock</a>
             <a class="{% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
             {% if session.get('user_id') %}
             <a href="{{ url_for('logout') }}">Logout</a>
@@ -18,79 +18,79 @@
         </nav>
     </header>
     <div class="centered-title">
-        <h2>Available Inventory</h2>
+        <h2>Available Cars</h2>
     </div>
     <div class="car-listings">
         <a href="{{ url_for('book_car', car_name='Car Model 1') }}" class="car-card">
             <div class="car-preview" style="background-image: url('/static/car1.jpg');"></div>
             <div class="car-details">
-                <h3>Car Name</h3>
-                <p>Price: $XX,XXX</p>
-                <p>Mileage: XX,XXX miles</p>
-                <p>Year: XXXX</p>
+                <h3>White Range Rover</h3>
+                <p>Price: Contact Us</p>
+                <p>Mileage: 101,567 Kilometers</p>
+                <p>Year: 2019</p>
             </div>
         </a>
         <a href="{{ url_for('book_car', car_name='Car Model 2') }}" class="car-card">
             <div class="car-preview" style="background-image: url('/static/car2.jpg');"></div>
             <div class="car-details">
-                <h3>Car Name</h3>
-                <p>Price: $XX,XXX</p>
-                <p>Mileage: XX,XXX miles</p>
-                <p>Year: XXXX</p>
+                <h3>Black Dodge Challenger Coupe</h3>
+                <p>Price: Contact Us</p>
+                <p>Mileage: 48,500 Kilometers</p>
+                <p>Year: 2021</p>
             </div>
         </a>
         <a href="{{ url_for('book_car', car_name='Car Model 3') }}" class="car-card">
             <div class="car-preview" style="background-image: url('/static/car3.jpg');"></div>
             <div class="car-details">
-                <h3>Car Name</h3>
-                <p>Price: $XX,XXX</p>
-                <p>Mileage: XX,XXX miles</p>
-                <p>Year: XXXX</p>
+                <h3>Blue Alpin</h3>
+                <p>Price: Coming Soon</p>
+                <p>Mileage: TBA</p>
+                <p>Year: TBA</p>
             </div>
         </a>
         <a href="{{ url_for('book_car', car_name='Car Model 4') }}" class="car-card">
             <div class="car-preview" style="background-image: url('/static/car4.jpg');"></div>
             <div class="car-details">
-                <h3>Car Name</h3>
-                <p>Price: $XX,XXX</p>
-                <p>Mileage: XX,XXX miles</p>
-                <p>Year: XXXX</p>
+                <h3>Toyota Land Cruiser</h3>
+                <p>Price: $27,500</p>
+                <p>Mileage: 170,000 Kilometers</p>
+                <p>Year: 2017</p>
             </div>
         </a>
         <a href="{{ url_for('book_car', car_name='Car Model 5') }}" class="car-card">
             <div class="car-preview" style="background-image: url('/static/car5.jpg');"></div>
             <div class="car-details">
-                <h3>Car Name</h3>
-                <p>Price: $XX,XXX</p>
-                <p>Mileage: XX,XXX miles</p>
-                <p>Year: XXXX</p>
+                <h3>Jeep Wrangler</h3>
+                <p>Price: 31,000</p>
+                <p>Mileage: 39,000 Kilometers</p>
+                <p>Year: 2019</p>
             </div>
         </a>
         <a href="{{ url_for('book_car', car_name='Car Model 6') }}" class="car-card">
             <div class="car-preview" style="background-image: url('/static/car6.jpg');"></div>
             <div class="car-details">
-                <h3>Car Name</h3>
-                <p>Price: $XX,XXX</p>
-                <p>Mileage: XX,XXX miles</p>
-                <p>Year: XXXX</p>
+                <h3>BMW</h3>
+                <p>Price: Coming Soon</p>
+                <p>Mileage: TBA</p>
+                <p>Year: TBA</p>
             </div>
         </a>
         <a href="{{ url_for('book_car', car_name='Car Model 7') }}" class="car-card">
             <div class="car-preview" style="background-image: url('/static/car7.jpg');"></div>
             <div class="car-details">
-                <h3>Car Name</h3>
-                <p>Price: $XX,XXX</p>
-                <p>Mileage: XX,XXX miles</p>
-                <p>Year: XXXX</p>
+                <h3>Bugatti</h3>
+                <p>Price: Contact Us</p>
+                <p>Mileage: 2,109 Kilometers</p>
+                <p>Year: TBA</p>
             </div>
         </a>
         <a href="{{ url_for('book_car', car_name='Car Model 8') }}" class="car-card">
             <div class="car-preview" style="background-image: url('/static/car8.jpg');"></div>
             <div class="car-details">
-                <h3>Car Name</h3>
-                <p>Price: $XX,XXX</p>
-                <p>Mileage: XX,XXX miles</p>
-                <p>Year: XXXX</p>
+                <h3>Kia Telluride</h3>
+                <p>Price: 58,000</p>
+                <p>Mileage: 29,000 Kilometers</p>
+                <p>Year: 2023</p>
             </div>
         </a>
     </div>

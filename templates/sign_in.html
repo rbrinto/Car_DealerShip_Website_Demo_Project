@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - Car Dealership</title>
+    <title>Sign In - Phynix Auto Group</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
-        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Car Dealership</a></h1>
+        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Phynix Auto Group</a></h1>
         <nav>
-            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Inventory</a>
+            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Cars In-Stock</a>
             <a class="{% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
         </nav>
     </header>
@@ -21,7 +21,7 @@
             <input type="password" name="password" placeholder="Enter your password" required>
             <button type="submit">Sign In</button>
         </form>
-        <p>Don't have an account? <a href="{{ url_for('index') }}">Register here</a>.</p>
+        <p>Don't have an account? <a href="{{ url_for('index') }}">Sign in</a>.</p>
     </div>
 </body>
 </html>

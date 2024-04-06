@@ -7,8 +7,8 @@ body {
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #31273a;
+    color: #ffffff;
     padding: 20px;
     text-align: center;
     position: relative;
@@ -64,6 +64,7 @@ nav a:hover {
 
 .welcome-section {
     max-width: 800px;
+    text-align: center;
     margin: 20px auto;
     padding: 0 20px;
 }
@@ -72,7 +73,7 @@ nav a:hover {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
-    background-color: #f9f9f9;
+    background-color: #bdb4db;
     border-radius: 20px;
     text-align: center;
 }
@@ -89,7 +90,8 @@ nav a:hover {
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
-    background-color: #f9f9f9;
+    background-color: #7d7d9e;
+    color: #fff;
     border-radius: 10px;
     text-align: center;
 }

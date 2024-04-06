@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Dealership</title>
+    <title>Phynix Auto Group</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
-        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Car Dealership</a></h1>
+        <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Phynix Auto Group</a></h1>
         <nav>
-            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Inventory</a>
+            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Available Cars</a>
             <a class="{% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
             {% if session.get('user_id') %}
             <a href="{{ url_for('logout') }}">Logout</a>
@@ -19,8 +19,8 @@
         </nav>
     </header>
     <div class="welcome-section">
-        <h2>Welcome to Our Car Dealership!</h2>
-        <p>At Car Dealership, we're passionate about providing you with the best selection of quality cars at competitive prices. With years of experience in the automotive industry, we strive to exceed your expectations every step of the way.</p>
+        <h2>Welcome to Phynix Auto Group</h2>
+        <p>At Phynix Auto Group, we're passionate about providing you with the best selection of quality cars at competitive prices. With years of experience in the automotive industry, we strive to exceed your expectations every step of the way.</p>
         <p>Whether you're in the market for a new vehicle or looking to trade in your current car, our team of experts is here to assist you. Browse our inventory online or visit our showroom to explore our wide range of vehicles.</p>
         <p>We look forward to serving you and helping you find the perfect car that suits your needs and budget.</p>
     </div>
@@ -34,7 +34,7 @@
         
     </div>
     <div class="registration-section">
-        <h2>Create an Account</h2>
+        <h2>Join Our Family Today</h2>
         <form action="/register" method="POST" onsubmit="return validateRegistrationForm()">
             <input type="text" name="username" placeholder="Username" required>
             <input type="email" name="email" placeholder="Email Address" required>
@@ -43,7 +43,7 @@
             <button type="submit">Register</button>
         </form>
         {% if not session.get('user_id') %}
-        <p>Already have an account? <a href="{{ url_for('sign_in') }}">Sign in here</a>.</p>
+        <p>Already have an account? <a href="{{ url_for('sign_in') }}">Sign in</a>.</p>
         {% endif %}
     </div>
     <script>

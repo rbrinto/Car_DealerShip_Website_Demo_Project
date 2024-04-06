@@ -4,7 +4,7 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'root'
+app.config['MYSQL_PASSWORD'] = '61017751'
 app.config['MYSQL_DB'] = 'caraccounts'
 app.config['SECRET_KEY'] = 'my_secret_key'
 
@@ -93,6 +93,7 @@ def book_car():
     return redirect("/inventory")
 
 @app.route('/mybookings')
+
 def mybookings():
     cur = mysql.connection.cursor()
     

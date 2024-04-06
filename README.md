@@ -13,4 +13,7 @@ This project is a combination of frontened and backened web development all toge
 
 # Usage
 
-This project is a personal assignment project for Seneca students which is still in development and do not work without further modifications (installing a mysql server) on the backened.
+Launch app.py and make sure flask module is installed.
+Launch mysql database and restore caraccounts database to ensure proper funtion
+
+From browser = http://localhost:5000
