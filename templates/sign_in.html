@@ -10,7 +10,6 @@
     <header>
         <h1><a href="{{ url_for('index') }}" style="text-decoration: none; color: inherit;">Phynix Auto Group</a></h1>
         <nav>
-            <a class="{% if active_page == 'inventory' %}active{% endif %}" href="{{ url_for('inventory') }}">Cars In-Stock</a>
             <a class="{% if active_page == 'about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
         </nav>
     </header>
