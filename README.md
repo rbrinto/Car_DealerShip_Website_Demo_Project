@@ -17,6 +17,6 @@ This project is a combination of frontened and backened web development all toge
 # Usage
 
 Launch app.py and make sure flask module is installed.
-Launch mysql database and restore caraccounts database to ensure proper funtion
+Launch mysql database and restore caraccounts database on mysql workbench to ensure proper funtion
 
 From browser = http://localhost:5000
