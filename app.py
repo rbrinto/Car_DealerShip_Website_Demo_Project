@@ -76,7 +76,6 @@ def book_car():
 
     # Perform the booking confirmation
         # Update the bookings column in the users table
-        # You need to replace this with your database logic
     user_id = session.get('user_id')  # Assuming the user is logged in
     if user_id is not None:
         # Append the booked car name to the bookings field
